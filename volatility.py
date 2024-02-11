@@ -7,7 +7,7 @@ from datetime import datetime
 from pandas_datareader import data, wb
 import math
 
-dataframe = pd.read_csv("your_stock_file.csv",sep=",",header=None)
+dataframe = pd.read_csv("stocks.csv",sep=",",header=None)
 
 n=len(dataframe.columns)
 tickers = []
@@ -55,4 +55,4 @@ for i in range(len(rawvol)):
                 rawvol.iloc[i,j]=yrl[k] 
                 k=k+1
                 
-rawvol.to_csv(r'your_volatility_output_target_file.csv', index = False, header=True)
+rawvol.to_csv(r'volatility.csv', index = False, header=True)
